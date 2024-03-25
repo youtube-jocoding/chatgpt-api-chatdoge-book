@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운세 보는 챗도지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="intro" class="intro-container">
+        <h1>운세를 알려드립니다.</h1>
+        <img src="doge.png" alt="chatdoge">
+        <label for="date">생년월일</label>
+        <input id="date" type="date">
+        <label for="hour">태어난 시간</label>
+        <select id="hour">
+            <option value="">모름</option>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+        <button onclick="start()">오늘의 운세보기</button>
+    </div>
+    <div id="chat" class="chat-container" style="display: none;">
+        <div class="chat-bubble user-bubble">
+            안녕하세요! 운세를 확인해주세요.
+        </div>
+        <div class="chat-bubble bot-bubble" id="fortuneResponse">
+            <!-- The fortune response will appear here -->
+        </div>
+        <div id="loader" class="loader" style="display: none;">
+            <i class="loading-icon fas fa-spinner fa-spin"></i>
+        </div>
+        <input type="text" class="chat-input" id="messageInput" placeholder="메시지를 입력하세요...">
+        <button class="send-button" onclick="sendMessage()">보내기</button>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>
